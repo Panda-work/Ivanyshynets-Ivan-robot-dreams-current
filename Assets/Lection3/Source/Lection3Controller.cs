@@ -5,7 +5,7 @@ using UnityEngine;
 public class Lection3Controller : MonoBehaviour
 {
     [SerializeField] private string _value;
-     private List<string> _List;
+     private List<string> _list  = new List<string>();
     
     
     [ContextMenu("Print")]
@@ -13,8 +13,8 @@ public class Lection3Controller : MonoBehaviour
     private void Print()
     {
         string msg = "list:";
-        for (int i = 0; i < _List.Count; ++i)
-            msg += $"\n{_List[i]}";
+        for (int i = 0; i < _list.Count; ++i)
+            msg += $"\n{_list[i]}";
         Debug.Log(msg);
     }
     
@@ -25,7 +25,7 @@ public class Lection3Controller : MonoBehaviour
     private void Add()
     {
         Debug.Log("Add: " + _value);
-        _List.Add(_value);
+        _list.Add(_value);
     }
     
     
@@ -35,7 +35,7 @@ public class Lection3Controller : MonoBehaviour
     private void Remove()
     {
         Debug.Log("Remove: " + _value);
-        _List.Remove(_value);
+        _list.Remove(_value);
     }
     
     
@@ -45,7 +45,7 @@ public class Lection3Controller : MonoBehaviour
     private void Clear()
     {
         Debug.Log("Clear");
-        _List.Clear();
+        _list.Clear();
     }
     
     
@@ -55,7 +55,7 @@ public class Lection3Controller : MonoBehaviour
     private void Sort()
     {
         Debug.Log("Sort");
-        _List.Sort();
+        _list.Sort();
     }
 
 }
